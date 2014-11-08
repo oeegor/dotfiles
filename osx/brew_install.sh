@@ -2,6 +2,7 @@
 brew install openssl
 brew install redis
 brew install postgresql
+brew install htop
 
 # Install Cask
 brew install caskroom/cask/brew-cask
