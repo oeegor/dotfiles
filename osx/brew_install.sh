@@ -18,6 +18,6 @@ brew cask install google-chrome
 brew cask install iterm2
 brew cask install atom
 
-brew cask install adium
 brew cask install nvalt
 brew cask install rdio
+brew cask install audacity
