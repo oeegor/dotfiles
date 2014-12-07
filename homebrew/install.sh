@@ -13,28 +13,39 @@ then
 fi
 
 # Install homebrew packages
-brew install grc coreutils spark
-brew install openssl
-brew install redis
-brew install postgresql
-brew install htop
+apps=(
+  grc
+  caskroom/cask/brew-cask
+  coreutils
+  spark
+  openssl
+  redis
+  postgresql
+  htop
+)
+brew install ${apps[@]}
 
 # Install Cask
 brew install caskroom/cask/brew-cask
 
 # Install Casks
-brew cask install alfred
-brew cask install flux
+casks=(
+  alfred
+  flux
+  virtualbox
+  node
+  google-chrome
+  iterm2
+  atom
+  nvalt
+  rdio
+  audacity
+)
 
-brew cask install virtualbox
-brew cask install node
-
-brew cask install google-chrome
-brew cask install iterm2
-brew cask install atom
-
-brew cask install nvalt
-brew cask install rdio
-brew cask install audacity
+# Install apps to ~/Applications
+# Default is: /Users/$user/Applications
+# to overwrite, add:  --appdir="/Applications"
+echo "installing cask apps..."
+brew cask install --appdir="/Applications" ${casks[@]}
 
 exit 0
