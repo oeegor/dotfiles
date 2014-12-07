@@ -31,6 +31,7 @@ brew install caskroom/cask/brew-cask
 # Install Casks
 casks=(
   flux
+  dropbox
   virtualbox
   node
   google-chrome
