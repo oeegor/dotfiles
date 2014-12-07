@@ -41,12 +41,13 @@ casks=(
   rdio
   audacity
   spectacle
+  vlc
 )
 
 # Install apps to ~/Applications
 # Default is: /Users/$user/Applications
 # to overwrite, add:  --appdir="/Applications"
 echo "installing cask apps..."
-brew cask install --appdir="/Applications" ${casks[@]}
+brew cask install ${casks[@]}
 
 exit 0
