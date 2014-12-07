@@ -30,7 +30,6 @@ brew install caskroom/cask/brew-cask
 
 # Install Casks
 casks=(
-  alfred
   flux
   virtualbox
   node
