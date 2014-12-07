@@ -40,6 +40,7 @@ casks=(
   nvalt
   rdio
   audacity
+  spectacle
 )
 
 # Install apps to ~/Applications
