@@ -25,8 +25,8 @@ apps=(
 )
 brew install ${apps[@]}
 
-# Install Cask
-brew install caskroom/cask/brew-cask
+# upgrade cask
+brew upgrade caskroom/cask/brew-cask
 
 # Install Casks
 casks=(
