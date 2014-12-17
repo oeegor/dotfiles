@@ -25,6 +25,9 @@ apps=(
 )
 brew install ${apps[@]}
 
+# upgrade cask
+brew upgrade caskroom/cask/brew-cask
+
 # Install Casks
 casks=(
   flux
