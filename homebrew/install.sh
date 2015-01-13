@@ -40,6 +40,7 @@ casks=(
   nvalt
   rdio
   audacity
+  picasa
   skype
   spectacle
   vlc
