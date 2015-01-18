@@ -43,6 +43,7 @@ casks=(
   picasa
   skype
   spectacle
+  utorrent
   vlc
 )
 
