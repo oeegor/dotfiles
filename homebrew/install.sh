@@ -28,6 +28,9 @@ brew install ${apps[@]}
 # upgrade cask
 brew upgrade caskroom/cask/brew-cask
 
+# update cask versions
+brew tap caskroom/versions
+
 # Install Casks
 casks=(
   flux
@@ -41,8 +44,10 @@ casks=(
   rdio
   audacity
   picasa
+  sdspeed
   skype
   spectacle
+  sublime-text3
   utorrent
   vlc
 )
