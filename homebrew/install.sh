@@ -43,6 +43,7 @@ casks=(
   nvalt
   rdio
   audacity
+  monotype-skyfonts
   picasa
   sdspeed
   skype
