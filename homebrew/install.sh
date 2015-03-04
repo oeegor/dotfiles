@@ -14,14 +14,15 @@ fi
 
 # Install homebrew packages
 apps=(
-  grc
   caskroom/cask/brew-cask
   coreutils
-  spark
-  openssl
-  redis
-  postgresql
+  grc
   htop
+  openssl
+  postgresql
+  python
+  redis
+  spark
 )
 brew install ${apps[@]}
 
@@ -33,23 +34,23 @@ brew tap caskroom/versions
 
 # Install Casks
 casks=(
-  flux
+  atom
+  audacity
   dropbox
-  virtualbox
-  node
+  flux
   google-chrome
   iterm2
-  atom
-  nvalt
-  rdio
-  audacity
   monotype-skyfonts
+  node
+  nvalt
   picasa
+  rdio
   sdspeed
   skype
   spectacle
   sublime-text3
   utorrent
+  virtualbox
   vlc
 )
 
