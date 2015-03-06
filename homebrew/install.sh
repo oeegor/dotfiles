@@ -34,6 +34,7 @@ brew tap caskroom/versions
 
 # Install Casks
 casks=(
+  adobe-creative-cloud
   atom
   audacity
   dropbox
