@@ -1,0 +1,12 @@
+{
+        "folder_exclude_patterns":
+        [
+                "env",
+                "node_modules"
+        ],
+        "font_size": 14,
+        "ignored_packages":
+        [
+                "Vintage"
+        ]
+}
