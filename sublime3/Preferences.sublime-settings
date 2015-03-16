@@ -5,6 +5,7 @@
                 "node_modules"
         ],
         "font_size": 14,
+        "trim_trailing_white_space_on_save": true,
         "ignored_packages":
         [
                 "Vintage"
