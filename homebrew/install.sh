@@ -49,6 +49,7 @@ casks=(
   sdspeed
   skype
   spectacle
+  spotify
   sublime-text3
   utorrent
   virtualbox
