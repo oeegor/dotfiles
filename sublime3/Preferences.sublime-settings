@@ -2,12 +2,15 @@
         "folder_exclude_patterns":
         [
                 "env",
-                "node_modules"
+                "node_modules",
+                ".git"
         ],
         "font_size": 14,
         "trim_trailing_white_space_on_save": true,
         "ignored_packages":
         [
                 "Vintage"
-        ]
+        ],
+        "tab_size": 4,
+        "translate_tabs_to_spaces": true
 }
