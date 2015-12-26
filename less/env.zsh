@@ -1,3 +1,3 @@
 
 export LESS='-R'
-export LESSOPEN='|~/.lessfilter %s'
+export LESSOPEN='| sh ~/.lessfilter %s'
