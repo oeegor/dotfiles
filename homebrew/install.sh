@@ -9,57 +9,16 @@
 if test ! $(which brew)
 then
   echo "  Installing Homebrew for you."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+  # Install the correct homebrew for each OS type
+  if test "$(uname)" = "Darwin"
+  then
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
+  then
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+  fi
+
 fi
-
-# Install homebrew packages
-apps=(
-  caskroom/cask/brew-cask
-  coreutils
-  grc
-  htop
-  openssl
-  postgresql
-  python
-  redis
-  spark
-)
-brew install ${apps[@]}
-
-# upgrade cask
-brew upgrade caskroom/cask/brew-cask
-
-# update cask versions
-brew tap caskroom/versions
-
-# Install Casks
-casks=(
-  adobe-creative-cloud
-  atom
-  audacity
-  dropbox
-  flux
-  google-chrome
-  iterm2
-  monotype-skyfonts
-  node
-  nvalt
-  picasa
-  rdio
-  sdspeed
-  skype
-  spectacle
-  spotify
-  sublime-text3
-  utorrent
-  virtualbox
-  vlc
-)
-
-# Install apps to ~/Applications
-# Default is: /Users/$user/Applications
-# to overwrite, add:  --appdir="/Applications"
-echo "installing cask apps..."
-brew cask install ${casks[@]}
 
 exit 0
