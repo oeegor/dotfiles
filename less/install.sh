@@ -1,1 +1,1 @@
-easy_intall Pygments
+pip install Pygments
