@@ -3,6 +3,8 @@ tap 'caskroom/versions'
 
 brew 'xz'
 brew 'coreutils'
+brew 'docker-machine'
+brew 'docker-machine-driver-xhyve'
 brew 'gdbm'
 brew 'grc'
 brew 'htop-osx'

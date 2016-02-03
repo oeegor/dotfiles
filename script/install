@@ -11,6 +11,7 @@ find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
 
 # Run Homebrew through the Brewfile
 brew tap 'homebrew/bundle'
+brew update
 echo "› brew bundle"
 brew bundle
 
