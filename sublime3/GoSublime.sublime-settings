@@ -1,3 +1,5 @@
 {
     "fmt_cmd": ["goimports"],
+    "autocomplete_builtins": true,
+    "use_named_imports": true,
 }

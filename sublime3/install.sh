@@ -2,15 +2,23 @@
 
 set e
 
-TARGET_DIR="$HOME/Library/Application Support/Sublime Text 3/Packages/User/"
+USER_DIR="$HOME/Library/Application Support/Sublime Text 3/Packages/User/"
 INSTALLED_PKGS_DIR="$HOME/Library/Application Support/Sublime Text 3/Installed Packages/"
 PACKAGE_MANAGER_APP_PATH="$INSTALLED_PKGS_DIRPackage Control.sublime-package"
 
-echo "copying sublime3 config"
-cp sublime3/Preferences.sublime-settings "$TARGET_DIR"
+for file in \
+    "Anaconda.sublime-settings" \
+    "Default (OSX).sublime-keymap" \
+    "GoSublime.sublime-settings" \
+    "Preferences.sublime-settings"
+do
+    TARGET_PATH="$USER_DIR$file"
+    echo "removing $file"
+    rm "$TARGET_PATH"
+    echo "installing $file"
+    cp "sublime3/$file" "$TARGET_PATH"
+done
 
-echo "copying sublime3 key bindings"
-cp "sublime3/Default (OSX).sublime-keymap" "$TARGET_DIR"
 
 echo "installing package manager"
 if [ -f "$INSTALLED_PKGS_DIR/Package Control.sublime-package" ]
