@@ -2,4 +2,8 @@
     "fmt_cmd": ["goimports"],
     "autocomplete_builtins": true,
     "use_named_imports": true,
+    "env": {
+        "GOPATH": "~/dev/go:$(pwd):$(pwd)/vendor",
+        "PATH": "$PATH:~/dev/go/bin",
+    },
 }
