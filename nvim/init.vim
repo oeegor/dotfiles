@@ -8,6 +8,13 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 " Remove trailing whitespaces before save
 autocmd BufWritePre * :%s/\s\+$//e
 
+" rw settings
+set autowriteall
+set encoding=utf-8
+set fileencodings=utf-8,windows-1251,iso-8859-15,koi8-r
+set hidden
+set noswapfile
+
 " interface
 set cursorline
 set laststatus=2
@@ -26,6 +33,16 @@ set ignorecase
 set smartcase
 set wrapscan
 
+" text formatting
+set autoindent
+set backspace=indent,eol,start
+set expandtab
+set shiftround
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+vnoremap < <gv
+vnoremap > >gv
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -53,6 +70,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 Plug 'jlanzarotta/bufexplorer', { 'tag': 'v7.4.6' }
+let g:bufExplorerShowRelativePath=1
 
 Plug 'flazz/vim-colorschemes'
 
@@ -64,6 +82,9 @@ Plug 'fatih/vim-go'
 Plug 'Shougo/deoplete.nvim'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 
+Plug 'ervandew/supertab'
+Plug 'powerline/powerline'
+Plug 'tpope/vim-fugitive'
 " Add plugins to &runtimepath
 call plug#end()
 
