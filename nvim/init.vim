@@ -11,11 +11,11 @@ autocmd BufWritePre * :%s/\s\+$//e
 " rw settings
 set autowriteall
 set encoding=utf-8
-set fileencodings=utf-8,windows-1251,iso-8859-15,koi8-r
 set hidden
 set noswapfile
 
 " interface
+set nocompatible   " Disable vi-compatibility
 set cursorline
 set laststatus=2
 set nowrap
@@ -83,7 +83,8 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 Plug 'ervandew/supertab'
-Plug 'powerline/powerline'
+" powerline not yet supported
+" Plug 'Lokaltog/powerline', { 'rtp': 'powerline/bindings/vim/' }
 Plug 'tpope/vim-fugitive'
 " Add plugins to &runtimepath
 call plug#end()
