@@ -16,12 +16,12 @@ set noswapfile
 
 " interface
 set nocompatible   " Disable vi-compatibility
-set cursorline
+set cursorline " show a visual line under the cursor's current line
 set laststatus=2
 set nowrap
 set number
 set scrolloff=3
-set showmatch
+set showmatch " show the matching part of the pair for [] {} and ()
 set title
 
 " Search and replace
@@ -34,13 +34,13 @@ set smartcase
 set wrapscan
 
 " text formatting
-set autoindent
+set autoindent " indent when moving to the next line while writing code
 set backspace=indent,eol,start
-set expandtab
+set expandtab " expand tabs into spaces
 set shiftround
-set shiftwidth=4
+set shiftwidth=4 " when using the >> or << commands, shift lines by 4 spaces
 set softtabstop=4
-set tabstop=4
+set tabstop=4 " set tabs to have 4 spaces
 vnoremap < <gv
 vnoremap > >gv
 
