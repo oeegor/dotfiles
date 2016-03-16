@@ -46,13 +46,14 @@ vnoremap > >gv
 
 call plug#begin('~/.config/nvim/plugged')
 
-" Make sure you use single quotes
-
 Plug 'junegunn/vim-easy-align'
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
-Plug 'junegunn/vim-github-dashboard'
-
-Plug 'kien/ctrlp.vim', { 'tag': '1.79' }
+Plug 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_custom_ignore = {
     \ 'dir': '\v[\/](env|node_modules|bower_components)$',
@@ -85,6 +86,10 @@ Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'ervandew/supertab'
 " powerline not yet supported
 " Plug 'Lokaltog/powerline', { 'rtp': 'powerline/bindings/vim/' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline#extensions#tabline#enabled = 1
+
 Plug 'tpope/vim-fugitive'
 " Add plugins to &runtimepath
 call plug#end()
