@@ -72,9 +72,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 Plug 'jlanzarotta/bufexplorer', { 'tag': 'v7.4.6' }
 let g:bufExplorerShowRelativePath=1
+nmap <silent> <Leader>e :BufExplorer<CR>
+
 
 Plug 'flazz/vim-colorschemes'
-
+Plug 'mutewinter/nginx.vim'
+Plug 'ekalinin/Dockerfile.vim'
 Plug 'majutsushi/tagbar'
 
 Plug 'fatih/vim-go'
