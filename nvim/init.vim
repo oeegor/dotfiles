@@ -16,12 +16,12 @@ set noswapfile
 
 " interface
 set nocompatible   " Disable vi-compatibility
-set cursorline
+set cursorline " show a visual line under the cursor's current line
 set laststatus=2
 set nowrap
 set number
 set scrolloff=3
-set showmatch
+set showmatch " show the matching part of the pair for [] {} and ()
 set title
 
 " Search and replace
@@ -34,25 +34,26 @@ set smartcase
 set wrapscan
 
 " text formatting
-set autoindent
+set autoindent " indent when moving to the next line while writing code
 set backspace=indent,eol,start
-set expandtab
+set expandtab " expand tabs into spaces
 set shiftround
-set shiftwidth=4
+set shiftwidth=4 " when using the >> or << commands, shift lines by 4 spaces
 set softtabstop=4
-set tabstop=4
+set tabstop=4 " set tabs to have 4 spaces
 vnoremap < <gv
 vnoremap > >gv
 
 call plug#begin('~/.config/nvim/plugged')
 
-" Make sure you use single quotes
-
 Plug 'junegunn/vim-easy-align'
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
-Plug 'junegunn/vim-github-dashboard'
-
-Plug 'kien/ctrlp.vim', { 'tag': '1.79' }
+Plug 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_custom_ignore = {
     \ 'dir': '\v[\/](env|node_modules|bower_components)$',
@@ -71,9 +72,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 Plug 'jlanzarotta/bufexplorer', { 'tag': 'v7.4.6' }
 let g:bufExplorerShowRelativePath=1
+nmap <silent> <Leader>e :BufExplorer<CR>
+
 
 Plug 'flazz/vim-colorschemes'
-
+Plug 'mutewinter/nginx.vim'
+Plug 'ekalinin/Dockerfile.vim'
 Plug 'majutsushi/tagbar'
 
 Plug 'fatih/vim-go'
@@ -85,6 +89,10 @@ Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'ervandew/supertab'
 " powerline not yet supported
 " Plug 'Lokaltog/powerline', { 'rtp': 'powerline/bindings/vim/' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline#extensions#tabline#enabled = 1
+
 Plug 'tpope/vim-fugitive'
 " Add plugins to &runtimepath
 call plug#end()
