@@ -46,6 +46,7 @@ vnoremap > >gv
 
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'davidhalter/jedi-vim'
 Plug 'junegunn/vim-easy-align'
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
