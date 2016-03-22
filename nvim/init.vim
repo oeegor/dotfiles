@@ -13,7 +13,9 @@ set autowriteall
 set encoding=utf-8
 set hidden
 set noswapfile
-set clipboard=unnamed
+set clipboard+=unnamed  " use the clipboards of vim and win
+set paste               " Paste from a windows or from vim
+set go+=a               " Visual selection automatically copied to the clipboard
 
 " interface
 set nocompatible   " Disable vi-compatibility
