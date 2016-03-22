@@ -13,6 +13,7 @@ set autowriteall
 set encoding=utf-8
 set hidden
 set noswapfile
+set clipboard=unnamed
 
 " interface
 set nocompatible   " Disable vi-compatibility
