@@ -44,6 +44,8 @@ set tabstop=4 " set tabs to have 4 spaces
 vnoremap < <gv
 vnoremap > >gv
 
+nnoremap <leader>b Oimport ipdb; ipdb.set_trace()<Esc>
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'junegunn/vim-easy-align'
