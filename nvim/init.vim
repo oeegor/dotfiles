@@ -60,6 +60,7 @@ nmap ga <Plug>(EasyAlign)
 
 Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_show_hidden = 1
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_custom_ignore = {
     \ 'dir': '\v[\/](env|node_modules|bower_components)$',
