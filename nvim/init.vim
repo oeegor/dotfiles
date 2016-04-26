@@ -69,6 +69,7 @@ nmap <leader>p :CtrlP<cr>
 
 Plug 'scrooloose/nerdtree', { 'tag': '4.2.0' }
 let NERDTreeIgnore=[]
+let g:NERDTreeShowHidden=1
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 " How can I open a NERDTree automatically when vim starts up if no files were specified?
 autocmd StdinReadPre * let s:std_in=1
