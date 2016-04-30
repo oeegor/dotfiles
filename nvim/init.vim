@@ -47,7 +47,12 @@ set tabstop=4 " set tabs to have 4 spaces
 vnoremap < <gv
 vnoremap > >gv
 
+" python helpers
 nnoremap <leader>b Oimport ipdb; ipdb.set_trace()<Esc>
+au Filetype python setl et ts=4 sw=4
+
+au Filetype javascript setl et ts=4 sw=4
+
 
 call plug#begin('~/.config/nvim/plugged')
 
