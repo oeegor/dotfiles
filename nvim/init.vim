@@ -8,6 +8,10 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 " Remove trailing whitespaces before save
 autocmd BufWritePre * :%s/\s\+$//e
 
+" shell settings
+set shell=zsh
+set shellcmdflag+=i
+
 " rw settings
 set autowriteall
 set encoding=utf-8
