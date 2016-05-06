@@ -10,7 +10,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " shell settings
 set shell=zsh
-set shellcmdflag+=i
 
 " rw settings
 set autowriteall
