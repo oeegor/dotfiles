@@ -112,6 +112,14 @@ function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+" use deoplete.
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#go#align_class = 1
+" set completeopt+=noinsert
+set completeopt+=preview
+let g:deoplete#sources = {}
+let g:deoplete#sources._ = ['buffer']
+let g:deoplete#sources.python = ['buffer', 'jedi']
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'zchee/deoplete-jedi'
@@ -137,11 +145,6 @@ let g:syntastic_check_on_wq = 0
 " Add plugins to &runtimepath
 call plug#end()
 
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#go#align_class = 1
-" set completeopt+=noinsert
-set completeopt+=preview
 
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
