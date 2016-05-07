@@ -108,8 +108,13 @@ let g:go_fmt_command = "goimports"
 
 " Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 
-Plug 'Shougo/deoplete.nvim'
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'zchee/deoplete-jedi'
 
 Plug 'ervandew/supertab'
 " powerline not yet supported
