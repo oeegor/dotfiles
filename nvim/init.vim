@@ -2,6 +2,8 @@
 let mapleader = "\<Space>"
 nnoremap <Leader>w :w<CR>
 nmap <Leader><Leader> V
+"use jj as escape key
+imap jj <Esc>
 nmap <Leader>t :TagbarToggle<CR>
 " Jump to the last known position in a file just after opening it, if the '" mark is set
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g`\"" | endif
@@ -60,6 +62,7 @@ au Filetype javascript setl et ts=4 sw=4
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'davidhalter/jedi-vim'
+let g:jedi#use_splits_not_buffers = 'bottom'
 Plug 'junegunn/vim-easy-align'
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -119,7 +122,7 @@ let g:deoplete#sources#go#align_class = 1
 set completeopt+=preview
 let g:deoplete#sources = {}
 let g:deoplete#sources._ = ['buffer']
-let g:deoplete#sources.python = ['buffer', 'jedi']
+let g:deoplete#sources.python = ['buffer']
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'zchee/deoplete-jedi'
