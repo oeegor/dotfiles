@@ -22,3 +22,6 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # disable autocorrect
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+
+# enable text replacements for all apps
+defaults write -g WebAutomaticTextReplacementEnabled -bool true
