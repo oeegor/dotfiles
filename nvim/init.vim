@@ -134,6 +134,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline#extensions#tabline#enabled = 1
 
+Plug 'cstrahan/vim-capnp'
+
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/syntastic'
 set statusline+=%#warningmsg#
