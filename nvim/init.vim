@@ -47,16 +47,17 @@ set wrapscan
 set autoindent " indent when moving to the next line while writing code
 set backspace=indent,eol,start
 set expandtab " expand tabs into spaces
+set smarttab
 set shiftround
 set shiftwidth=4 " when using the >> or << commands, shift lines by 4 spaces
 set softtabstop=4
-set tabstop=4 " set tabs to have 4 spaces
 vnoremap < <gv
 vnoremap > >gv
 
 " python helpers
 nnoremap <leader>b Oimport ipdb; ipdb.set_trace()<Esc>
-au Filetype python setl et ts=4 sw=4
+au Filetype python set list
+au Filetype python set listchars=tab:>-  " > is shown at the beginning, - throughout
 
 au Filetype javascript setl et ts=4 sw=4
 
