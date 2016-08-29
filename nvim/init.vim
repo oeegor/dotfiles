@@ -62,7 +62,6 @@ nnoremap <leader>b Oimport ipdb; ipdb.set_trace()<Esc>
 au Filetype python set et ts=4 sw=4 tw=79
 au Filetype python set list
 au Filetype python set listchars=tab:>-  " > is shown at the beginning, - throughout
-au FileType python map <buffer> <Leader>c :call Flake8()<CR>
 
 au Filetype javascript setl et ts=4 sw=4
 
@@ -131,9 +130,6 @@ let g:airline#extensions#tabline#enabled = 1
 Plug 'cstrahan/vim-capnp'
 
 Plug 'tpope/vim-fugitive'  " git commands
-
-Plug 'nvie/vim-flake8'
-let python_highlight_all=1
 
 Plug 'scrooloose/syntastic', {'commit': 'd9814c5233931bb111fcae7cdc623a9f29495e5d'}
 set statusline+=%#warningmsg#
