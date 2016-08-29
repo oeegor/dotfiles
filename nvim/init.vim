@@ -12,6 +12,11 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 " Remove trailing whitespaces before save
 autocmd BufWritePre * :%s/\s\+$//e
 
+inoremap <c-h> <left>
+inoremap <c-j> <down>
+inoremap <c-k> <up>
+inoremap <c-l> <right>
+
 " shell settings
 set shell=zsh
 
@@ -44,18 +49,22 @@ set smartcase
 set wrapscan
 
 " text formatting
+set encoding=utf-8
 set autoindent " indent when moving to the next line while writing code
 set backspace=indent,eol,start
 set expandtab " expand tabs into spaces
-set smarttab
 set shiftround
 set shiftwidth=4 " when using the >> or << commands, shift lines by 4 spaces
 set softtabstop=4
 vnoremap < <gv
 vnoremap > >gv
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
 
 " python helpers
 nnoremap <leader>b Oimport ipdb; ipdb.set_trace()<Esc>
+au Filetype python set et ts=4 sw=4 tw=79
 au Filetype python set list
 au Filetype python set listchars=tab:>-  " > is shown at the beginning, - throughout
 
@@ -66,6 +75,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'davidhalter/jedi-vim'
 let g:jedi#use_splits_not_buffers = 'bottom'
+
 Plug 'junegunn/vim-easy-align'
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -82,7 +92,7 @@ let g:ctrlp_custom_ignore = {
 " Use a leader instead of the actual named binding
 nmap <leader>p :CtrlP<cr>
 
-Plug 'scrooloose/nerdtree', { 'tag': '4.2.0' }
+Plug 'scrooloose/nerdtree', { 'tag': '5.0.0' }
 let NERDTreeIgnore=[]
 let g:NERDTreeShowHidden=1
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
@@ -92,15 +102,14 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " How can I close vim if the only window left open is a NERDTree?
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-Plug 'jlanzarotta/bufexplorer', { 'tag': 'v7.4.6' }
+Plug 'jlanzarotta/bufexplorer', { 'tag': '7.4.10' }
 let g:bufExplorerShowRelativePath=1
 nmap <silent> <Leader>e :BufExplorer<CR>
-
 
 Plug 'flazz/vim-colorschemes'
 Plug 'mutewinter/nginx.vim'
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar', { 'tag': 'v2.6.1' }
 
 Plug 'fatih/vim-go'
 let g:go_highlight_functions = 1
@@ -111,26 +120,12 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
 
-
-" Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
-
 function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-" use deoplete.
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#go#align_class = 1
-" set completeopt+=noinsert
-set completeopt+=preview
-let g:deoplete#sources = {}
-let g:deoplete#sources._ = ['buffer']
-let g:deoplete#sources.python = ['buffer']
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-Plug 'zchee/deoplete-go', { 'do': 'make'}
-Plug 'zchee/deoplete-jedi'
 
-Plug 'ervandew/supertab'
+Plug 'Valloric/YouCompleteMe'
+
 " powerline not yet supported
 " Plug 'Lokaltog/powerline', { 'rtp': 'powerline/bindings/vim/' }
 Plug 'vim-airline/vim-airline'
