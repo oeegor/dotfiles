@@ -2,7 +2,9 @@
 let mapleader = "\<Space>"
 filetype plugin on
 
-nnoremap <Leader>w :w<CR>
+nmap <Leader>w :w<CR>
+nmap ,i i_<Esc>r
+nmap ,a a_<Esc>r
 nmap <Leader><Leader> V
 "use jj as escape key
 imap jj <Esc>
@@ -139,6 +141,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_python_checkers = ['flake8']
+
+let g:syntastic_mode_map = { 'passive_filetypes': ['go'] }
 
 " Add plugins to &runtimepath
 call plug#end()
