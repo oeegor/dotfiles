@@ -1,7 +1,6 @@
 # Tips for tuning nvim
 
 For `deoplete` and `deoplete-go` need to run:
-    pip3 install neovim
 
 And then execute `:UpdateRemotePlugins`
 
