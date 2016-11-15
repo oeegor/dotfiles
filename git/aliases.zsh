@@ -10,7 +10,7 @@ fi
 alias ga='git add'
 alias gaa='git add --all'
 alias gma='git commit -am'
-alias gmab='git commit -am \"$(git symbolic-ref --short HEAD)\"'
+alias gmab='function _gmab(){ git commit -am "$(git symbolic-ref --short HEAD);$1" };_gmab'
 alias gamn='git commit -am "nv"'
 alias gl='git pull --prune'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
