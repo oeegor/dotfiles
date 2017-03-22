@@ -14,9 +14,3 @@ brew tap 'homebrew/bundle'
 brew update
 echo "› brew bundle"
 brew bundle
-
-# install bg-r46 keyboard layout
-curl --fail http://apple-blogger.ru/wp-content/uploads/2013/03/russian_kb_layout.zip -o russian_kb_layout.zip \
-    && unzip russian_kb_layout.zip \
-    && sudo mv russian_keylayout/* /Library/Keyboard\ Layouts \
-    && rm -fr russian_kb_layout.zip russian_keylayout
