@@ -4,5 +4,6 @@ set -ex
 
 if [ "$(uname -s)" == "Linux" ]
 then
-	ln -s $(pwd)/xmonad.hs $HOME/.xmonad/
+	mkdir -p $HOME/.xmonad
+	ln -fs $(pwd)/xmonad/xmonad.hs $HOME/.xmonad/
 fi
