@@ -25,3 +25,6 @@ defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
 # enable text replacements for all apps
 defaults write -g WebAutomaticTextReplacementEnabled -bool true
+
+# install bg46 keylayout
+cp osx/russian_keylayout/* ~/Library/Keyboard\ Layouts/

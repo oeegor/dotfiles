@@ -1,1 +1,1 @@
-pip install Pygments
+pip install --user Pygments

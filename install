@@ -4,14 +4,7 @@
 
 DOTFILES_ROOT=$(pwd)
 
-set -e
-
-# Run Homebrew through the Brewfile
-brew tap 'homebrew/bundle'
-brew update
-echo "› brew bundle"
-brew bundle
-brew services start --all || true
+set -ex
 
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done

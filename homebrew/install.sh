@@ -14,9 +14,13 @@ then
   if test "$(uname)" = "Darwin"
   then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
-  then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+
+    brew tap 'homebrew/bundle'
+    brew update
+    echo "› brew bundle"
+    brew bundle
+    brew services start --all || true
+    
   fi
 
 fi

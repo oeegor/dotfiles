@@ -1,3 +1,7 @@
 #!/bin/bash
 
-./export-shortcuts.sh | sh
+
+if [ "$(uname -s)" == "Darwin" ]
+then
+	./export-shortcuts.sh | sh
+fi

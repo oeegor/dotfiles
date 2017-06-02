@@ -1,6 +1,12 @@
 #!/bin/bash
 
-set e
+set -ex
+
+if [ "$(uname -s)" != "Darwin" ]
+then
+  exit 0
+fi
+
 
 USER_DIR="$HOME/Library/Application Support/Sublime Text 3/Packages/User/"
 INSTALLED_PKGS_DIR="$HOME/Library/Application Support/Sublime Text 3/Installed Packages/"
