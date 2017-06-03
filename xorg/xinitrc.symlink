@@ -1,9 +1,9 @@
 
 # set trackpad settings
 TRACKPADID=$(xinput list | grep Trackpad | sed -nr 's/.*id=([0-9]+).*/\1/p')
-TAPID=$(xinput list-props 11 | sed -nr 's/.*Tapping Enabled \(([0-9]{3}).*/\1/p')
+TAPID=$(xinput list-props $TRACKPADID | sed -nr 's/.*Tapping Enabled \(([0-9]+).*/\1/p')
 xinput set-prop $TRACKPADID $TAPID 1
-SCROLLID=$(xinput list-props 11 | sed -nr 's/.*Natural Scrolling Enabled \(([0-9]{3}).*/\1/p')
+SCROLLID=$(xinput list-props $TRACKPADID | sed -nr 's/.*Natural Scrolling Enabled \(([0-9]+).*/\1/p')
 xinput set-prop $TRACKPADID $SCROLLID 1
 
 xrandr --output HDMI1 --brightness .5
