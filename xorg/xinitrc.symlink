@@ -6,6 +6,7 @@ xinput set-prop $TRACKPADID $TAPID 1
 SCROLLID=$(xinput list-props $TRACKPADID | sed -nr 's/.*Natural Scrolling Enabled \(([0-9]+).*/\1/p')
 xinput set-prop $TRACKPADID $SCROLLID 1
 
+setxkbmap -option caps:escape
 xrandr --output HDMI1 --brightness .5
 xmodmap .Xmodmap
 termite &
