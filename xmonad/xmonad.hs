@@ -11,6 +11,7 @@ main = do
     xmonad baseConfig
         { modMask       = mod4Mask
         , focusFollowsMouse = False
+        , focusedBorderColor = "#000000"
         , terminal      = "termite"
         , logHook = dynamicLogWithPP $ sjanssenPP {ppOutput = hPutStrLn xmproc}
         , startupHook = startup
