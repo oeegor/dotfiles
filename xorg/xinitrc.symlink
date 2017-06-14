@@ -11,8 +11,8 @@ SCROLLID=$(xinput list-props $TRACKPADID | sed -nr 's/.*Natural Scrolling Enable
 xinput set-prop $TRACKPADID $SCROLLID 1
 
 # xrandr --output HDMI1 --brightness .5
-setxkbmap -option caps:swapescape
 xmodmap .Xmodmap
+setxkbmap -option caps:swapescape
 termite &
 chromium &
 xmonad
