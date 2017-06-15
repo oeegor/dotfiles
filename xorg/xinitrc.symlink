@@ -13,6 +13,7 @@ xinput set-prop $TRACKPADID $SCROLLID 1
 # xrandr --output HDMI1 --brightness .5
 xmodmap .Xmodmap
 setxkbmap -option caps:swapescape
+xbindkeys
 pgrep redshift &> /dev/null || redshift &> /dev/null
 termite &
 chromium &
