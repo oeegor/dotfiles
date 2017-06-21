@@ -1,0 +1,6 @@
+#!/bin/sh
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+# xrandr --auto
+xrandr --output eDP-1-1 --auto --output VGA-1-1 --auto --right-of eDP-1-1
+
+
