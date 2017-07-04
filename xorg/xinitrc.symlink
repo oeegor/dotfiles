@@ -15,6 +15,4 @@ xmodmap .Xmodmap
 setxkbmap -option caps:swapescape
 xbindkeys
 #pgrep redshift &> /dev/null || redshift &> /dev/null
-termite &
-chromium &
 xmonad
