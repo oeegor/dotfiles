@@ -2,3 +2,8 @@
 "xscreensaver-command --lock"
     m:0x0 + c:169
     XF86Eject
+
+"maim -s | xclip -selection clipboard -t image/png"
+    m:0x5 + c:33
+    Control+Shift + p
+
