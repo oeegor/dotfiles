@@ -14,5 +14,6 @@ xinput set-prop $TRACKPADID $SCROLLID 1
 xmodmap .Xmodmap
 setxkbmap -option caps:swapescape
 xbindkeys
+xscreensaver
 #pgrep redshift &> /dev/null || redshift &> /dev/null
 xmonad
