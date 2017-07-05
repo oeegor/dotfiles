@@ -4,6 +4,6 @@
     XF86Eject
 
 "maim -s | xclip -selection clipboard -t image/png"
-    m:0x5 + c:33
-    Control+Shift + p
+    m:0x45 + c:13
+    Control+Shift+Mod4 + 4
 
