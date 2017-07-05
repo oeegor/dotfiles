@@ -3,7 +3,6 @@
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --output eDP-1-1 --auto --output VGA-1-1 --auto --right-of eDP-1-1
 
-
 # set trackpad settings
 TRACKPADID=$(xinput list | grep -Ei "(трекпад)" | sed -nr 's/.*id=([0-9]+).*/\1/p')
 TAPID=$(xinput list-props $TRACKPADID | sed -nr 's/.*Tapping Enabled \(([0-9]+).*/\1/p')
@@ -11,9 +10,10 @@ xinput set-prop $TRACKPADID $TAPID 1
 SCROLLID=$(xinput list-props $TRACKPADID | sed -nr 's/.*Natural Scrolling Enabled \(([0-9]+).*/\1/p')
 xinput set-prop $TRACKPADID $SCROLLID 1
 
+# xrandr --output HDMI1 --brightness .5
 xmodmap .Xmodmap
 setxkbmap -option caps:swapescape
 xbindkeys
-xscreensaver
-#pgrep redshift &> /dev/null || redshift &> /dev/null
+xscreensaver&
+# pgrep redshift &> /dev/null || redshift &> /dev/null
 xmonad

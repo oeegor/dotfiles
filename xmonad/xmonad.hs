@@ -10,7 +10,6 @@ myManageHook = composeAll . concat $ [
     [ className =? "Termite" --> doShift "term" ],
     [ className =? "Chromium" --> doShift "web" ],
     [ className =? "Franz" --> doShift "web" ],
-    [ className =? "Gogland" --> doShift "gogl" ],
     [ className =? "Subl3" --> doShift "subl" ]
     ]
 
