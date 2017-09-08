@@ -12,5 +12,5 @@ xmodmap .Xmodmap
 setxkbmap -option caps:swapescape
 xbindkeys
 xscreensaver&
-# pgrep redshift &> /dev/null || redshift &> /dev/null
+pgrep redshift || redshift &
 xmonad
