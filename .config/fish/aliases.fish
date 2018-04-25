@@ -1,17 +1,24 @@
-# Quick edits
-alias ea 'vim ~/.config/fish/aliases.fish'
-alias ef 'vim ~/.config/fish/config.fish'
-alias eg 'vim ~/.gitconfig'
-alias ev 'vim ~/.vimrc'
-alias es 'vim ~/bin/autosort'
-alias et 'vim ~/.tmux.conf'
+alias ga 'git add'
+alias gaa 'git add --all'
+alias gma 'git commit -am'
 
-alias vim-norc 'vim -u NORC'
-alias vim-none 'vim -u NONE'
-
-function pdftext
-    pdftotext -layout $argv[1] -
+function gmab
+    git commit -am "[(git symbolic-ref --short HEAD)] $1"
 end
+
+alias gl 'git pull'
+alias glog "git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias gp 'git push origin'
+alias gd 'git diff'
+alias gc 'git commit'
+alias gcm 'git checkout master'
+alias gco 'git checkout'
+alias gcb 'git checkout -b'
+alias gbn 'git copy-branch-name'
+alias gbr 'git branch'
+alias gs 'git status -sb' # upgrade your git if -sb breaks for you. it's fun.
+alias groot 'cd "(git rev-parse --show-toplevel)"'  # go to the root of the project
+alias ggrep 'git grep'
 
 function serve
     if test (count $argv) -ge 1
@@ -30,13 +37,6 @@ function timestamp
 end
 
 set LS_COLORS dxfxcxdxbxegedabagacad
-
-alias df 'command df -m'
-alias j jobs
-alias l ls
-alias ll 'ls -la'
-alias ls 'command ls -FG'
-alias su 'command su -m'
 
 function lsd -d 'List only directories (in the current dir)'
     command ls -d */ | sed -Ee 's,/+$,,'
@@ -70,10 +70,6 @@ end
 
 function def -d "Quickly jump to place where a function, method, or variable is defined"
     va "^\s*(def\s+$argv|$argv\s*[=])"
-end
-
-function vimff
-    vim (ffind -tf $argv)
 end
 
 function f
@@ -155,15 +151,13 @@ function vconflicts
     va '^([<]{7}|[>]{7}|[=]{7})([ ].*)?$'
 end
 
-alias git hub
-alias gti git
 alias a 'git amend --allow-empty --no-verify'
 alias gb 'git recent-branches 2.days.ago'
 alias ggco 'git switch'
 alias fl 'clear; and flow-limit'
 
 function git-search
-    git log -S"$argv" --pretty=format:%H | map git show 
+    git log -S"$argv" --pretty=format:%H | map git show
 end
 
 function cleanpycs
@@ -309,9 +303,6 @@ function color-syntax
     end
     pygmentize -f rtf -l $lang
 end
-
-alias h=heroku
-alias gp='cd ~/Projects/SimpleContacts/simplecontacts'
 
 function wtf -d "Print which and --version output for the given command"
     for arg in $argv

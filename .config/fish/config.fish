@@ -155,10 +155,6 @@ if status --is-login
     . ~/.config/fish/env.fish
 end
 
-if status --is-interactive
-    set CDPATH . ~/Projects/SimpleContacts ~/Projects
-end
-
 # }}}
 
 set -gx __fish_initialized 1
