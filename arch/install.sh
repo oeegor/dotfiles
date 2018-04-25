@@ -10,7 +10,7 @@ then
 		bluez \
 		bluez-utils \
 		chromium \
-                dmenu \
+		dmenu \
 		git \
 		htop \
 		libinput \
