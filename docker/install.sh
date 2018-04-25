@@ -1,5 +1,5 @@
 #!/bin/sh
-
+exit 0
 if [ "$(uname -s)" == "Darwin" ]
 then
 	# sadly, doesn't work without sudo yet

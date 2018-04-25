@@ -20,7 +20,7 @@ for file in \
 do
     TARGET_PATH="$USER_DIR$file"
     echo "removing $file"
-    rm "$TARGET_PATH"
+    rm -fr "$TARGET_PATH"
     echo "installing $file"
     cp "sublime3/$file" "$TARGET_PATH"
 done
