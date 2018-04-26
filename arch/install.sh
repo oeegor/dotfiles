@@ -21,6 +21,7 @@ then
 		sudo \
 		termite \
 		unzip \
+		ttf-bitstream-vera \
 		xmobar \
 		xmonad \
 		xmonad-contrib \
