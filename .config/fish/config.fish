@@ -1,4 +1,5 @@
 . ~/.config/fish/aliases.fish
+# . ~/.config/fish/fzf.fish
 
 # Fish prompt/color config {{{
 
