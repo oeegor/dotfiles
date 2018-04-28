@@ -9,19 +9,19 @@ set -gx fish_greeting ''
 function fish_prompt
     set last_status $status
 
-    echo ' '
+    # echo ' '
 
-    set user (whoami)
+    # set user (whoami)
 
-    set_color magenta
-    printf '%s' $user
-    set_color normal
-    printf ' '
+    # set_color magenta
+    # printf '%s' $user
+    # set_color normal
+    # printf ' '
 
-    set_color yellow
-    printf '%s' (hostname -s)
-    set_color normal
-    printf ' '
+    # set_color yellow
+    # printf '%s' (hostname -s)
+    # set_color normal
+    # printf ' '
 
     set_color $fish_color_cwd
     printf '%s' (echo $PWD | sed -e "s|^$HOME|~|" -e 's|^/private||')
