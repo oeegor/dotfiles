@@ -5,7 +5,7 @@ set -gx PATH /bin
 append-to-path /sbin
 append-to-path /usr/bin
 append-to-path /usr/sbin
-prepend-to-path /usr/local/sbin
+#prepend-to-path /usr/local/sbin
 prepend-to-path /usr/local/bin
 
 # Set locale
