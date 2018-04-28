@@ -134,22 +134,6 @@ end
 
 # }}}
 
-# Key bindings {{{
-
-function fish_user_key_bindings
-    bind \ec append-copy
-    bind \ep prepend-paste
-    bind \ev prepend-vim
-    bind \ey 'commandline -b | pbcopy'
-    bind \e'>' 'commandline -a -- "| shiftr"'
-    bind \e'<' 'commandline -a -- "| shiftl"'
-    bind \es 'git st'
-    bind \ed 'git di'
-    bind \ex 'git x'
-end
-
-# }}}
-
 # Interactive/login shells {{{
 
 if status --is-login
@@ -162,6 +146,5 @@ set -gx __fish_initialized 1
 
 eval (direnv hook fish)
 
-fzf_key_bindings
 
 test -e ~/.iterm2_shell_integration.fish ; and source ~/.iterm2_shell_integration.fish
