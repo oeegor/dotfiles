@@ -16,12 +16,12 @@ function fish_prompt
     set_color magenta
     printf '%s' $user
     set_color normal
-    printf ' at '
+    printf ' '
 
     set_color yellow
     printf '%s' (hostname -s)
     set_color normal
-    printf ' in '
+    printf ' '
 
     set_color $fish_color_cwd
     printf '%s' (echo $PWD | sed -e "s|^$HOME|~|" -e 's|^/private||')
@@ -29,10 +29,6 @@ function fish_prompt
 
     git_prompt
     virtualenv_prompt
-
-    set_color normal
-    printf ' (%s)' (date +%H:%M)
-    echo
 
     #if test $last_status -eq 0
     #    set_color white -o
