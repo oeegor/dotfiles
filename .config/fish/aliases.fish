@@ -3,7 +3,7 @@ alias gaa 'git add --all'
 alias gma 'git commit -am'
 
 function gmab
-    git commit -am "[(git symbolic-ref --short HEAD)] $1"
+    git commit -am "["(git symbolic-ref --short HEAD)"] $argv"
 end
 
 alias gl 'git pull'
