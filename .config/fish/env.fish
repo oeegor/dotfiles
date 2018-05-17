@@ -5,12 +5,16 @@ set -gx PATH /bin
 append-to-path /sbin
 append-to-path /usr/bin
 append-to-path /usr/sbin
+append-to-path ~/dev/go/bin
 #prepend-to-path /usr/local/sbin
 prepend-to-path /usr/local/bin
 
 # Set locale
 set -gx LC_ALL en_US.UTF-8
 set -gx LANG en_US.UTF-8
+
+# GOPATH
+set -gx GOPATH ~/dev/go
 
 # Configure fzf to use fd by default (fd respects .gitignore defaults)
 set -gx FZF_DEFAULT_COMMAND 'fd --type f'
