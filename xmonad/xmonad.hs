@@ -30,5 +30,5 @@ startup :: X()
 startup = do
     spawn "termite"
     spawn "chromium"
-    spawn "franz-bin"
-    spawn "subl3"
+    spawn "subl"
+    swapn "telegram-desktop"
