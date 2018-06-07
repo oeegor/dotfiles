@@ -31,4 +31,4 @@ startup = do
     spawn "termite"
     spawn "chromium"
     spawn "subl"
-    swapn "telegram-desktop"
+    spawn "telegram-desktop"
