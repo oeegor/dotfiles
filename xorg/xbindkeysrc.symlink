@@ -3,7 +3,12 @@
     m:0x0 + c:169
     XF86Eject
 
+# screenshot selection: https://github.com/naelstrof/maim
 "maim -s | xclip -selection clipboard -t image/png"
     m:0x45 + c:13
     Control+Shift+Mod4 + 4
 
+# screenshot selection to file
+"maim -s ~/Downloads/screenshot-$(date +%s).png"
+    m:0x5 + c:13
+    Control+Shift + 4
