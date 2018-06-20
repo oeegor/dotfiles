@@ -12,7 +12,7 @@ function gmab() {
     if [ -z "$task" ]; then
         git commit -am "[$branch] $1"
     else
-        git commit -am "[#$task][$branch] $1"
+        git commit -am "[$branch] $1 #$task"
     fi
 }
 
