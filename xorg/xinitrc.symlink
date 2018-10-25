@@ -2,7 +2,8 @@
 
 set -x
 
-xrandr --output HDMI1 --brightness .8
+OUTPUT=$(xrandr | grep " connected" | cut -d' ' -f1)
+xrandr --output $OUTPUT --brightness .8
 xmodmap .Xmodmap
 setxkbmap -option caps:swapescape
 xbindkeys
