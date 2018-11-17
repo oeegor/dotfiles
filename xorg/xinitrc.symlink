@@ -1,16 +1,12 @@
 #!/bin/sh
 
-# set trackpad settings
-TRACKPADID=$(xinput list | grep -Ei "(трекпад|trackpad|touchpad)" | sed -nr 's/.*id=([0-9]+).*/\1/p')
-TAPID=$(xinput list-props $TRACKPADID | sed -nr 's/.*Tapping Enabled \(([0-9]+).*/\1/p')
-xinput set-prop $TRACKPADID $TAPID 1
-SCROLLID=$(xinput list-props $TRACKPADID | sed -nr 's/.*Natural Scrolling Enabled \(([0-9]+).*/\1/p')
-xinput set-prop $TRACKPADID $SCROLLID 1
+set -x
 
-xrandr --output HDMI1 --brightness .5
+OUTPUT=$(xrandr | grep " connected" | cut -d' ' -f1)
+xrandr --output $OUTPUT --brightness .8
 xmodmap .Xmodmap
 setxkbmap -option caps:swapescape
 xbindkeys
 xscreensaver&
-pgrep redshift || redshift &
+pgrep redshift || redshift -c ~/.config/redshift.conf &
 xmonad

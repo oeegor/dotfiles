@@ -5,13 +5,6 @@ import XMonad.Util.Run
 
 baseConfig = desktopConfig
 
-myManageHook = composeAll . concat $ [
-    [ className =? "Termite" --> doShift "term" ],
-    [ className =? "Chromium" --> doShift "web" ],
-    [ className =? "Franz" --> doShift "web" ],
-    [ className =? "Subl3" --> doShift "subl" ]
-    ]
-
 main = do
     xmproc <- spawnPipe "xmobar"
 
@@ -22,13 +15,10 @@ main = do
         , terminal      = "termite"
         , logHook = dynamicLogWithPP $ sjanssenPP {ppOutput = hPutStrLn xmproc}
         , startupHook = startup
-        , workspaces = ["term", "web", "gogl", "subl", "tmp", "6", "7", "8", "9", "0", "-", "="]
-        , manageHook = myManageHook <+> manageHook defaultConfig -- uses default too
+        , workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "="]
+        , manageHook = manageHook defaultConfig -- uses default too
         }
 
 startup :: X()
 startup = do
     spawn "termite"
-    spawn "chromium"
-    spawn "franz-bin"
-    spawn "subl3"
