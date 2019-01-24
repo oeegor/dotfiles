@@ -12,3 +12,16 @@
 "maim -s ~/Downloads/screenshot-$(date +%s).png"
     m:0x5 + c:13
     Control+Shift + 4
+
+"wmctrl -xa Terminal"
+    F9
+
+"wmctrl -xa Firefox"
+    F10
+
+"wmctrl -xa Sublime"
+    F11
+
+
+"wmctrl -xa Gogland"
+    F12
