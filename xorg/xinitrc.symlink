@@ -9,7 +9,7 @@ xbindkeys
 xscreensaver&
 pgrep redshift || redshift -c ~/.config/redshift.conf &
 #xmonad
-openbox-session  # if run just with 'openbox' then autostart script will not work
+# exec openbox-session  # if run just with 'openbox' then autostart script will not work
 #awesome
 #i3
-#startxfce4
+exec startxfce4

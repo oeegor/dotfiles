@@ -13,7 +13,16 @@
     m:0x5 + c:13
     Control+Shift + 4
 
-"wmctrl -xa Terminal"
+# "xvkbd -no-jump-pointer -xsendevent -text '\Cx'"
+# F2
+
+# "xvkbd -no-jump-pointer -xsendevent -text '\Cc'"
+# F3
+
+# "xvkbd -no-jump-pointer -xsendevent -text '\Cv'"
+# F4
+
+"wmctrl -xa Tilix"
     F9
 
 "wmctrl -xa Firefox"
@@ -22,6 +31,5 @@
 "wmctrl -xa Sublime"
     F11
 
-
-"wmctrl -xa Gogland"
+"wmctrl -xa Goland"
     F12

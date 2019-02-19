@@ -232,17 +232,17 @@
     <keybind key="F1">
       <action name="ToggleMaximize"/>
     </keybind>
-    <keybind key="F3">
+    <keybind key="F2">
       <action name="execute">
         <execute>wmctrl-switch-by-application</execute>
       </action>
     </keybind>
-    <keybind key="F4">
+    <keybind key="F3">
       <action name="NextWindow">
         <interactive>no</interactive>
       </action>
     </keybind>
-    <keybind key="F6">
+    <keybind key="F4">
       <action name="Close"/>
     </keybind>
     <keybind key="F7">

@@ -16,8 +16,8 @@
 #
 #xfce-mcs-manager &
 
-polybar example &
+# polybar example &
 
-xfce4-terminal &
+tilix &
 
 (sleep 1s && firefox) &
