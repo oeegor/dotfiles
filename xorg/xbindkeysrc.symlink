@@ -3,6 +3,10 @@
     m:0x0 + c:169
     XF86Eject
 
+"xscreensaver-command --lock"
+    m:0x40 + c:46
+    Mod4 + l
+
 # screenshot selection: https://github.com/naelstrof/maim
 "maim -s | xclip -selection clipboard -t image/png"
     m:0x45 + c:13
@@ -22,14 +26,14 @@
 # "xvkbd -no-jump-pointer -xsendevent -text '\Cv'"
 # F4
 
-"wmctrl -xa Tilix"
+"switch_to_app Tilix tilix"
     F9
 
-"wmctrl -xa Firefox"
+"switch_to_app Firefox firefox"
     F10
 
-"wmctrl -xa Sublime"
+"switch_to_app Sublime subl"
     F11
 
-"wmctrl -xa Goland"
+"switch_to_app Goland goland"
     F12
