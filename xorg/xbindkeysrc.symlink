@@ -29,8 +29,14 @@
 "switch_to_app Tilix tilix"
     F9
 
+"switch_to_app TelegramDesktop telegram-desktop"
+    Shift + F9
+
 "switch_to_app Firefox firefox"
     F10
+
+"switch_to_app Slack slack"
+    Shift + F10
 
 "switch_to_app Sublime subl"
     F11
