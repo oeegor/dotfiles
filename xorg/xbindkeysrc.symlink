@@ -1,9 +1,9 @@
 # lock pc
-"xscreensaver-command --lock"
+"xflock4"
     m:0x0 + c:169
     XF86Eject
 
-"xscreensaver-command --lock"
+"xflock4"
     m:0x40 + c:46
     Mod4 + l
 

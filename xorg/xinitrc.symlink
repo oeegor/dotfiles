@@ -6,7 +6,8 @@ xrandr --output $OUTPUT --brightness .8
 xmodmap .Xmodmap
 setxkbmap -option caps:swapescape
 xbindkeys
-xscreensaver&
+# using slock instead of xscreensaver
+# xscreensaver&
 pgrep redshift || redshift -c ~/.config/redshift.conf &
 #xmonad
 # exec openbox-session  # if run just with 'openbox' then autostart script will not work
