@@ -9,7 +9,7 @@
       <property name="position" type="string" value="p=6;x=0;y=0"/>
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="size" type="uint" value="30"/>
+      <property name="size" type="uint" value="36"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="1"/>
         <value type="int" value="3"/>
@@ -78,6 +78,18 @@
         <value type="string" value="blueman-applet"/>
         <value type="string" value="slack"/>
         <value type="string" value="blueman"/>
+        <value type="string" value="notes"/>
+      </property>
+      <property name="names-ordered" type="array">
+        <value type="string" value="blueman"/>
+        <value type="string" value="slack"/>
+        <value type="string" value="telegramdesktop"/>
+        <value type="string" value="mailspring"/>
+        <value type="string" value="skypeforlinux"/>
+        <value type="string" value="blueman-tray"/>
+        <value type="string" value="notes"/>
+        <value type="string" value="networkmanager applet"/>
+        <value type="string" value="clipman"/>
       </property>
     </property>
     <property name="plugin-7" type="string" value="showdesktop"/>
