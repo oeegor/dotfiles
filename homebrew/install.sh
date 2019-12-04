@@ -15,12 +15,13 @@ then
   then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+    brew analytics off
     brew tap 'homebrew/bundle'
     brew update
     echo "› brew bundle"
     brew bundle
     brew services start --all || true
-    
+
   fi
 
 fi
