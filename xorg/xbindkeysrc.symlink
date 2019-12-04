@@ -1,7 +1,11 @@
 # lock pc
-"xscreensaver-command --lock"
+"xflock4"
     m:0x0 + c:169
     XF86Eject
+
+"xflock4"
+    m:0x40 + c:46
+    Mod4 + l
 
 # screenshot selection: https://github.com/naelstrof/maim
 "maim -s | xclip -selection clipboard -t image/png"
@@ -12,3 +16,30 @@
 "maim -s ~/Downloads/screenshot-$(date +%s).png"
     m:0x5 + c:13
     Control+Shift + 4
+
+# "xvkbd -no-jump-pointer -xsendevent -text '\Cx'"
+# F2
+
+# "xvkbd -no-jump-pointer -xsendevent -text '\Cc'"
+# F3
+
+# "xvkbd -no-jump-pointer -xsendevent -text '\Cv'"
+# F4
+
+"switch_to_app Tilix tilix"
+    F9
+
+"switch_to_app TelegramDesktop telegram-desktop"
+    Shift + F9
+
+"switch_to_app Firefox firefox"
+    F10
+
+"switch_to_app Slack slack"
+    Shift + F10
+
+"switch_to_app Sublime subl"
+    F11
+
+"switch_to_app Goland goland"
+    F12
