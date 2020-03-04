@@ -34,6 +34,7 @@ then
         xorg-xrandr \
         vim \
         vlc \
+        wmctrl \
         zsh
 
     which yay || (git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -fr yay)

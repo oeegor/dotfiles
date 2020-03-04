@@ -13,4 +13,4 @@ pgrep redshift || redshift -c ~/.config/redshift.conf &
 # exec openbox-session  # if run just with 'openbox' then autostart script will not work
 #awesome
 #i3
-exec startxfce4
+# exec startxfce4
