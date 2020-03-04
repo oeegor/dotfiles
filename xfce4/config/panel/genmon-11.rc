@@ -1,6 +1,0 @@
-Command=/usr/local/bin/xfce-hkmon NET CPU TEMP IO RAM
-UseLabel=0
-Text=(genmon)
-UpdatePeriod=1000
-Font=Sans 10
-
