@@ -1,4 +1,4 @@
 export GOPATH="$PROJECTS"
 export GOBIN="$GOPATH/bin"
-export PATH="./bin:/usr/local/bin:/usr/local/sbin:$ZSH/bin:$PATH:$GOBIN"
+export PATH="$HOME/.local/bin:./bin:/usr/local/bin:/usr/local/sbin:$ZSH/bin:$PATH:$GOBIN"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"

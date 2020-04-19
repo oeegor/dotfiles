@@ -1,1 +1,1 @@
-export EDITOR='subl3'
+export EDITOR='subl'

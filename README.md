@@ -86,3 +86,8 @@ weight of my changes and tweaks inspired me to finally roll my own. But Ryan's
 dotfiles were an easy way to get into bash customization, and then to jump ship
 to zsh a bit later. A decent amount of the code in these dotfiles stem or are
 inspired from Ryan's original project.
+
+## notes
+
+there is no `xbindkeys` analog for wayland so one has to manually add all shortcuts in keyboard settings.
+do not forget to move `switch_to_app` binary to `/usr/local/bin/` because default location `~/bin` is not visible in hotkeys.

@@ -2,10 +2,10 @@
 set -x
 
 OUTPUT=$(xrandr | grep " connected" | cut -d' ' -f1)
-xrandr --output $OUTPUT --brightness .8
-xmodmap .Xmodmap
-setxkbmap -option caps:swapescape
-xbindkeys
+#xrandr --output $OUTPUT --brightness .8
+#xmodmap .Xmodmap
+#setxkbmap -option caps:swapescape
+#xbindkeys
 # using slock instead of xscreensaver
 # xscreensaver&
 pgrep redshift || redshift -c ~/.config/redshift.conf &
@@ -13,4 +13,4 @@ pgrep redshift || redshift -c ~/.config/redshift.conf &
 # exec openbox-session  # if run just with 'openbox' then autostart script will not work
 #awesome
 #i3
-# exec startxfce4
+#exec startxfce4
