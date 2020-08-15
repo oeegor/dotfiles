@@ -1,0 +1,65 @@
+{
+    "files.trimTrailingWhitespace": true,
+    "go.useLanguageServer": true,
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        // Optional: Disable snippets, as they conflict with completion ranking.
+        "editor.snippetSuggestions": "none"
+    },
+    "[go.mod]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "go.autocompleteUnimportedPackages": true,
+    "go.gotoSymbol.includeGoroot": true,
+    "go.gotoSymbol.includeImports": true,
+    "go.buildOnSave":"package",
+    "go.lintOnSave": "file",
+    "go.lintTool": "golangci-lint",
+    "go.docsTool":"gogetdoc",
+    "window.zoomLevel": 0,
+    "go.addTags": {
+
+    },
+    "go.testEnvVars":{
+        "GO_DISCOVERY_DATABASE_TEST_PASSWORD": "foo"
+    },
+    "explorer.confirmDelete": false,
+    "java.semanticHighlighting.enabled": false,
+    "go.alternateTools": {
+
+    },
+    "editor.formatOnPaste": true,
+    "search.exclude":{
+        "**/vendor": true
+    },
+    "explorer.confirmDragAndDrop": false,
+    "[json]": {
+        "editor.tabSize": 4
+    },
+    "[typescript]": {
+        "editor.tabSize": 4
+    },
+    "[yaml]": {
+        "editor.tabSize": 4
+    },
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    }
+}
