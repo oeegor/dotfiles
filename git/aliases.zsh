@@ -6,20 +6,11 @@ then
   alias git=$hub_path
 fi
 
-function gmab() {
-    branch=$(git symbolic-ref --short HEAD)
-    task=$(echo "$branch" | grep -o "\d\{5\}")
-    if [ -z "$task" ]; then
-        git commit -am "[$branch] $1"
-    else
-        git commit -am "[$branch] $1 #$task"
-    fi
-}
-
 # The rest of my fun git aliases
 alias ga='git add'
 alias gaa='git add --all'
 alias gma='git commit -am'
+alias gmab=gma
 alias gl='git pull'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gp='git push origin'
