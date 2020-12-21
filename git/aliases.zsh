@@ -7,6 +7,7 @@ then
 fi
 
 # The rest of my fun git aliases
+alias g='git'
 alias ga='git add'
 alias gaa='git add --all'
 alias gma='git commit -am'
